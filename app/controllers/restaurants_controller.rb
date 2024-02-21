@@ -8,7 +8,8 @@ class RestaurantsController < ApplicationController
   end
 
   # Method to show one restaurant with set_restaurant
-  def show; end
+  def show
+  end
 
   # Methods to create a new restaurant
   def new
@@ -17,13 +18,11 @@ class RestaurantsController < ApplicationController
 
   def create
     @restaurant = Restaurant.new(rest_params)
-
     if @restaurant.save
       redirect_to restaurant_path(@restaurant)
     else
       render :new, status: :unprocessable_entity
     end
-
   end
 
   private

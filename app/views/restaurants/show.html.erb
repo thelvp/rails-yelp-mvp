@@ -1,2 +1,26 @@
-<h2>The details of <%= @restaurant.name %></h2>
-<%= render "list" %>
+<div>
+  <h2>The details of <%= @restaurant.name %></h2>
+  <%= render "list" %>
+</div>
+
+<div class="mt-5">
+  <h3>Reviews</h3>
+  <ul class="list-group">
+    <% @restaurant.reviews.each do |review| %>
+      <li class="list-group-item review">"<%= review.content %>" - rating: <%= "⭐" * review.rating %></li>
+    <% end %>
+  </ul>
+</div>
+
+<div class="d-inline-flex">
+  <button class="mt-5 btn" type="button"> <%= link_to "Submit a review" , new_restaurant_review_path(@restaurant) %> </button>
+
+  <button class="mt-5 btn" type="button"> <%= link_to "Back to all restaurants", restaurants_path %> </button>
+</div>
+
+<%# -- Add stars as "string":
+<%= OPTION 1: "*" * review.rating %>
+<%# OPTION 2: <li class="list-group-item review">"<%= review.content %>
+<%# - rating: <%= ('<i class="fa-regular fa-star"></i>' * review.rating).html_safe %>
+
+<%# Link to parametric URL: %>

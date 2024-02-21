@@ -6,6 +6,8 @@ class Review < ApplicationRecord
   validates :rating, numericality: { in: 0..5 }
   validates :restaurant, presence: true
 
+  RATINGS = [0, 1, 2, 3, 4, 5]
+
 end
 
 # rails generate model review content:text rating:integer restaurant:references

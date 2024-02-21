@@ -14,11 +14,38 @@
  *= require_self
  */
 
+ /* imports  */
+
+ @import url('https://fonts.googleapis.com/css2?family=Namdhinggo:wght@400;500;600;700;800&display=swap');
+
+/* fonts  */
+
+h1, h2, h3 {
+  font-family: "Namdhinggo", serif;
+}
+
+ /* List styling */
+
  .list-group {
   width: 40%;
  }
 
- .btn a {
+.review {
+  font-weight: lighter;
+  font-family: "Namdhinggo", serif;
+}
+
+/* buttons */
+
+.btn a {
   color: white;
   text-decoration: none;
- }
+}
+
+.btn {
+  background-color: rgb(117, 118, 166);
+}
+
+.btn:hover {
+  background-color: rgb(72, 72, 101);
+}
