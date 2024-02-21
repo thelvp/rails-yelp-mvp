@@ -5,13 +5,17 @@
 
 /* fonts  */
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, .navbar {
   font-family: "Namdhinggo", serif;
   margin: 20px 0;
 }
 
 .small-font {
   font-size: small;
+}
+
+.light-font {
+  font-weight: lighter;
 }
 
  /* List styling */
@@ -23,6 +27,11 @@ h1, h2, h3, h4, h5 {
 .review {
   font-weight: lighter;
   font-family: "Namdhinggo", serif;
+}
+
+/* navbar */
+
+.navbar {
 }
 
 /* buttons & forms */
