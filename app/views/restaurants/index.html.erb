@@ -1,0 +1,10 @@
+<h2>Our Restaurants</h2>
+
+<ul>
+  <% @restaurants.each do |restaurant| %>
+  <li> <%= restaurant.name %> - cuisine: <%= restaurant.category.capitalize %> </li>
+  <% end %>
+</ul>
+
+<%# when show is implemented: change to %>
+<%# <%= link_to(restaurant.name, prefix_path) %>

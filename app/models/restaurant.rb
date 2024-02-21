@@ -10,7 +10,7 @@ end
 
 # rails generate model restaurant name:string address:string phone_number:string category:string
 
-# validation reqs
+# validation reqs for creating (user-side) / reqs for object are in db schema
 # [X] A restaurant must have a name, an address and a category.
 # [X] A restaurant’s category must belong to this fixed list: ["chinese", "italian", "japanese", "french", "belgian"].
 # [X] When a restaurant is destroyed, all of its reviews must be destroyed as well.

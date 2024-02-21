@@ -10,7 +10,7 @@ end
 
 # rails generate model review content:text rating:integer restaurant:references
 
-# validation reqs
+# validation reqs for creating (user-side)
 # [X] A review must have a content.
 # [X] A review must have a rating.
 # [X] A review’s rating must be a number between 0 and 5.

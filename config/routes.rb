@@ -5,6 +5,24 @@ Rails.application.routes.draw do
   # Can be used by load balancers and uptime monitors to verify that the app is live.
   get "up" => "rails/health#show", as: :rails_health_check
 
-  # Defines the root path route ("/")
-  # root "posts#index"
+  resources :restaurants, only: [:index, :new, :create, :show]
+    # resources :reviews insofar dependency on parent (new, create)
+  # resources :reviews insofar INDEPENDENT from parent (eg destroy)
+
 end
+
+# -- ROUTES
+# restaurants       GET  /restaurants(.:format)         restaurants#index
+# new_restaurant    GET  /restaurants/new(.:format)     restaurants#new
+#                   POST /restaurants(.:format)         restaurants#create
+# restaurant        GET  /restaurants/:id(.:format)     restaurants#show
+
+# -- USER STORIES
+# [X] A visitor can see the list of all restaurants. - GET "restaurants"
+# [ ] A visitor can add a new restaurant, and be redirected to the show view of that new restaurant. - GET "restaurants/new" - POST "restaurants"
+# [ ] A visitor can see the details of a restaurant, with all the reviews related to the restaurant. - GET "restaurants/38"
+# [ ] A visitor can add a new review to a restaurant - GET "restaurants/38/reviews/new" - POST "restaurants/38/reviews"
+# * Hint: to handle the route GET "restaurants/38/reviews/new", you will have to use nested resources. *
+
+# Coding in Silo: Route/Controller/View
+# Implement each user story separately! Start by writing the route (you can look at the routes above 😉), then coding the corresponding controller action and finally the view.
