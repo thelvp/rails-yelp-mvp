@@ -2,6 +2,6 @@
   <%= f.input :name %>
   <%= f.input :address %>
   <%= f.input :phone_number %>
-  <%= f.input :category.downcase, as: :select, collection: Restaurant::CATEGORIES %>
+  <%= f.input :category, as: :select, collection: Restaurant::CATEGORIES %>
   <%= f.button :submit, "submit", class: "btn btn-gray"  %>
  <% end %>
