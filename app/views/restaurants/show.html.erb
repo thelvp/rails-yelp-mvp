@@ -12,11 +12,8 @@
   </ul>
 </div>
 
-<div class="d-inline-flex">
-  <button class="mt-5 btn" type="button"> <%= link_to "Submit a review" , new_restaurant_review_path(@restaurant) %> </button>
-
-  <button class="mt-5 btn" type="button"> <%= link_to "Back to all restaurants", restaurants_path %> </button>
-</div>
+<%= link_to "Submit a review" , new_restaurant_review_path(@restaurant), class:"mt-5 btn btn-purple" %>
+<%= link_to "Back to all restaurants", restaurants_path, class:"mt-5 btn btn-purple" %>
 
 <%# -- Add stars as "string":
 <%= OPTION 1: "*" * review.rating %>

@@ -2,11 +2,11 @@
 <ul class="list-group">
   <% @restaurants.each do |restaurant| %>
     <li class="list-group-item"> <%= restaurant.name %> </li>
-    <button class="btn mb-4" type="button"> <%= link_to ">> show this restaurant", restaurant %> </button>
+    <%= link_to "read more", restaurant, class: "btn btn-gray mb-4 small-font" %>
   <% end %>
 </ul>
 
-<button class="mt-3 btn" type="button"> <%= link_to "Add a new restaurant", new_restaurant_path %> </button>
+<%= link_to "Add a new restaurant", new_restaurant_path, class: "btn btn-purple mt-3" %>
 
 <%# when show is implemented: change to %>
 <%# <%= link_to(restaurant.name, prefix_path) %>
