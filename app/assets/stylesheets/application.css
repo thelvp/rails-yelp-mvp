@@ -1,26 +1,11 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
-
  /* imports  */
 
+ @import url('https://use.fontawesome.com/releases/v6.1.2/css/all.css');
  @import url('https://fonts.googleapis.com/css2?family=Namdhinggo:wght@400;500;600;700;800&display=swap');
 
 /* fonts  */
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5, .navbar {
   font-family: "Namdhinggo", serif;
 }
 
@@ -35,9 +20,9 @@ h1, h2, h3 {
   font-family: "Namdhinggo", serif;
 }
 
-/* buttons */
+/* buttons & forms */
 
-.btn a {
+.btn > a {
   color: white;
   text-decoration: none;
 }
@@ -48,4 +33,38 @@ h1, h2, h3 {
 
 .btn:hover {
   background-color: rgb(72, 72, 101);
+}
+
+form {
+  width: 50%;
+}
+
+/* footer / socials list  */
+
+.footer {
+  text-align: center;
+  opacity: 0.8;
+  padding: 20px 0;
+}
+
+.footer > .list-inline  {
+  margin: 0 auto;
+}
+
+.list-inline > li {
+  display: inline-block;
+  padding: 0px 10px;
+}
+
+.fa-brands {
+  font-size: 30px;
+  color:  rgb(117, 118, 166);
+}
+
+.fa-brands:hover {
+  color: rgb(72, 72, 101);
+}
+
+.logo {
+  color: rgb(117, 118, 166);
 }
