@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+ .list-group {
+  width: 40%;
+ }
+
+ .btn a {
+  color: white;
+  text-decoration: none;
+ }

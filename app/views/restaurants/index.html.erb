@@ -1,10 +1,11 @@
 <h2>Our Restaurants</h2>
-
-<ul>
+<ul class="list-group">
   <% @restaurants.each do |restaurant| %>
-  <li> <%= restaurant.name %> - cuisine: <%= restaurant.category.capitalize %> </li>
+  <li class="list-group-item"> <%= restaurant.name %> <br> <%= link_to ">> show this restaurant", restaurant %> </li>
   <% end %>
 </ul>
+
+<button class="mt-3 btn btn-info" type="button"> <%= link_to "Add a new restaurant", new_restaurant_path %> </button>
 
 <%# when show is implemented: change to %>
 <%# <%= link_to(restaurant.name, prefix_path) %>
